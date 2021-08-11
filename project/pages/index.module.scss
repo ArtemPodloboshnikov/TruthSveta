@@ -1,0 +1,74 @@
+@import '../styles/vars.scss';
+
+@mixin colorfulPage($color) {
+    
+  
+        background-color: $color;
+        & path
+        {
+            fill: #F6F8F9 !important;
+            stroke: #F6F8F9 !important;
+        }
+        & *
+        {
+            -webkit-user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+
+    
+}
+
+@mixin colorfulLinks($color, $row)
+{
+    
+    display: grid;
+    grid-auto-flow: row;
+    grid-column: 11 / 12;
+    align-self: center;
+    row-gap: 9px;
+
+   
+    & > a:nth-child(2)
+    {
+        @if $row - 1 > 0
+        {
+           position: relative;
+           top: 65%;
+        }
+    }
+
+    & > .circle
+    {
+        width: 34px;
+        height: 34px;
+        background-color: $color;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+    & > .loupe
+    {
+        position: relative;
+        top: 40%;
+        grid-row: #{$row} / #{$row};
+    }
+    
+}
+.wrap_brown
+{
+    @include colorfulPage($light_brown);
+}
+.links_brown
+{
+    @include colorfulLinks($brown, 1);
+}
+.wrap_yellow
+{
+    @include colorfulPage($light_yellow);
+}
+.links_yellow
+{
+    @include colorfulLinks($crimson, 2);
+}

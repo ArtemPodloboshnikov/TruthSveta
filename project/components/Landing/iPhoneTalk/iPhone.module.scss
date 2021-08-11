@@ -1,0 +1,33 @@
+@import '../../../styles/vars';
+
+.buttonTruth
+{
+    position: relative;
+    background-color: #F6F8F9;
+    width: 88.29px;
+    height: 88.29px;
+    border-radius: 80px;
+    align-self: end;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    // border: 1px solid;
+    // border-image-source: radial-gradient(#0B0E7F , #0B95DD);
+    // border-image-slice: 1;
+
+    & > object
+    {
+        margin-top: 10%;
+    }
+
+    & > object:hover > svg > path
+    {
+        fill: #F6F8F9 !important;
+    }
+}
+.phone
+{
+    grid-column: 3 / 7;
+    width: 220%;
+
+}

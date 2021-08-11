@@ -1,0 +1,88 @@
+@font-face
+{
+  font-family: 'ValueSansPro-Black';
+  src: local('ValueSansPro-Black'), url('../public/fonts/ValueSansPro-Black.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face
+{
+  font-family: 'ValueSansPro-BlackItalic';
+  src: local('ValueSansPro-BlackItalic'), url('../public/fonts/ValueSansPro-BlackItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face
+{
+  font-family: 'ValueSansPro-Bold';
+  src: local('ValueSansPro-Bold'), url('../public/fonts/ValueSansPro-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face
+{
+  font-family: 'ValueSansPro-BoldItalic';
+  src: local('ValueSansPro-BoldItalic'), url('../public/fonts/ValueSansPro-BoldItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face
+{
+  font-family: 'ValueSansPro-Italic';
+  src: local('ValueSansPro-Italic'), url('../public/fonts/ValueSansPro-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face
+{
+  font-family: 'ValueSansPro-Medium';
+  src: local('ValueSansPro-Medium'), url('../public/fonts/ValueSansPro-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face
+{
+  font-family: 'ValueSansPro-MediumItalic';
+  src: local('ValueSansPro-MediumItalic'), url('../public/fonts/ValueSansPro-MediumItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face
+{
+  font-family: 'ValueSansPro-Regular';
+  src: local('ValueSansPro-Regular'), url('../public/fonts/ValueSansPro-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body,
+main {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+h1
+{
+  font-family: 'ValueSansPro-Black';
+  font-size: 72px;
+  height: 65px !important;
+  margin: 0;
+}
+p
+{
+  font-family: 'ValueSansPro-Regular';
+  font-size: 24px;
+  height: auto;
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

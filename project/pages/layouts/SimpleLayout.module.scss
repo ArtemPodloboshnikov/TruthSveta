@@ -1,0 +1,79 @@
+.main > div
+{
+    display: grid;
+    height: 100vh;
+    overflow: hidden;
+}
+/* xs - устройства (до 576px) */
+@media (max-width: 576px) {
+/* CSS для ширины, которая меньше 575px (включительно) */
+
+    .main > div
+    {
+        grid-template-columns: repeat(2, 174px);
+        grid-template-rows: repeat(2, 174px);
+        padding-left: 15px;
+        padding-right: 15px;
+        grid-column-gap: 30px;
+        padding-top: 10px;
+    }
+}
+
+/* sm-устройства (больше или равно 576px) */
+@media (min-width: 576px) {
+    /* CSS для: 576px <= ширины <= 767px */
+
+    .main > div
+    {
+        grid-template-columns: repeat(6, 60px);
+        grid-template-rows: repeat(6, 60px);
+        padding-left: 33px;
+        padding-right: 33px;
+        grid-column-gap: 30px;
+        padding-top: 10px;
+    }
+  }
+  
+  /* md-устройства (больше или равно 768px) */
+  @media (min-width: 768px) {
+    /* CSS для: 768px <= ширины <= 991px */
+
+    .main > div
+    {
+        grid-template-columns: repeat(12, 30px);
+        grid-template-rows: repeat(12, 30px);
+        padding-left: 39px;
+        padding-right: 39px;
+        grid-column-gap: 30px;
+        padding-top: 10px;
+    }
+  }
+  
+  /* lg-устройства (больше или равно 992px) */
+  @media (min-width: 992px) {
+    /* CSS для: 992px <= ширины <= 1119px */
+    .main > div
+    {
+        grid-template-columns: repeat(12, 50px);
+        grid-template-rows: repeat(12, 50px);
+        padding-left: 94px;
+        padding-right: 94px;
+        grid-column-gap: 30px;
+        padding-top: 10px;
+    }
+
+  }
+  
+  /* xl-устройства (больше или равно 1200px) */
+  @media (min-width: 1200px) {
+    
+    .main > div
+    {
+        grid-template-columns: repeat(12, 65px);
+        grid-template-rows: repeat(12, 65px);
+        padding-left: 165px;
+        padding-right: 165px;
+        grid-column-gap: 30px;
+        padding-top: 10px;
+    }
+  }
