@@ -1,0 +1,44 @@
+@import '../../../styles/vars.scss';
+
+.navicon
+{
+    display: grid !important;
+    width: 6vw;
+    height: 6vh;
+    grid-auto-flow: row;
+    grid-column: 12 / 12;
+    grid-row: 2 / 2;
+    position: relative;
+    right: 60%;
+    z-index: 5;
+    transform: scaleX(-1);
+
+    & > .stick 
+    {
+        height: 8px;
+        background-color: $white;
+        border-radius: 12px;
+    }
+    & > .stick:nth-child(1)
+    {
+        width: 76px;
+    }
+
+    & > .stick:nth-child(2)
+    {
+        width: 62px;
+    }
+
+    & > .stick:nth-child(3)
+    {
+        width: 43px;
+    }
+}
+.navicon:hover
+{
+    .stick:nth-child(2), .stick:nth-child(3)
+    {
+        width: 76px;
+        transition: width 0.4s ease;
+    }
+}

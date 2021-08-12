@@ -1,0 +1,24 @@
+@import '../../../styles/vars.scss';
+
+.buttonTruth_crimson
+{
+    grid-column: 12 / 12;
+    grid-row: 12 / 12;
+    right: 40%;
+    position: relative;
+    justify-content: end;
+    border: 3px solid $medium_crimson;
+    background-image: url('/logo_crimson.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 12px;
+    padding: 3px;
+    width: 84px;
+    height: 84px;
+    cursor: pointer;
+}
+.buttonTruth_crimson:hover
+{
+    background-image: url('/logo_white.svg');
+    background-color: $medium_crimson;
+}

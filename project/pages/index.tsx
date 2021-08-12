@@ -4,8 +4,24 @@ import SimpleLayout from './layouts/SimpleLayout';
 import WhoAreWe from '../components/Landing/AboutUs/WhoAreWe';
 import LandingContent from './LandingContent.json';
 import { Link } from 'react-scroll';
+import React, {useEffect, useState} from 'react';
 
 export default function Home() {
+
+  const [scroll, setScroll] = useState(0);
+
+  const handleScroll = () => {
+    setScroll(window.scrollY);
+  };
+
+  const handleUpButton = () => {
+    window.scrollTo(0, 0);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   enum colors {
 
@@ -24,7 +40,7 @@ export default function Home() {
         className={classes.circle} 
         smooth={true} 
         duration={1000} 
-        to={['AboutUs', 'iPhone'][+(color == 'yellow')]}/>
+        to={['AboutUs', 'iPhone'][+(color == colors.WhoAreWe)]}/>
         <Link className={classes.circle} smooth={true} duration={1000} to='#'/>
         <Link className={classes.circle} smooth={true} duration={1000} to='#'/>
         <Link className={classes.circle} smooth={true} duration={1000} to='#'/>
@@ -32,6 +48,7 @@ export default function Home() {
       </div>
     )
   }
+  // console.log(scroll)
   return (
     <SimpleLayout description="ПравдаСвета - это некомерческий проект направленный на борьбу с пропогандой и повышение морального уровня граждан">
       <IPhone 
@@ -44,6 +61,7 @@ export default function Home() {
       title={LandingContent.WhoAreWe.title} 
       text={LandingContent.WhoAreWe.text}
       className={classes['wrap_' + colors.WhoAreWe]}
+      scrollReach={(scroll < 600)}
       >
         <Links color={colors.WhoAreWe}/>
       </WhoAreWe>

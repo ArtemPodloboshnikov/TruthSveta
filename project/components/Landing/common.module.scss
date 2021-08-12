@@ -1,42 +1,23 @@
 @import '../../styles/vars.scss';
 
-.wrap
+
+.cta_crimson
 {
-    background-color: $light_brown;
-    & path
-    {
-        fill: #F6F8F9 !important;
-        stroke: #F6F8F9 !important;
-    }
-    & *
-    {
-        user-drag: none;
-        -webkit-user-drag: none;
-        user-select: none;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-    }
-}
-.links
-{
+    transform: rotate(0deg);
+    grid-column: 10 / 10;
+    grid-row: 10 / 10;
     display: grid;
     grid-auto-flow: row;
-    grid-column: 11 / 12;
-    align-self: center;
-    row-gap: 9px;
-
-    & > .circle
+    position: relative;
+    z-index: 4;
+    color: $medium_crimson;
+    
+    & > p
     {
-        width: 34px;
-        height: 34px;
-        background-color: $brown;
-        border-radius: 30px;
-        cursor: pointer;
-    }
-    & > .loupe
-    {
+        transform: rotate(-25deg);
+        width: 295px;
         position: relative;
-        top: 40%;
+        right: 40%;
+        background-color: $light_yellow;
     }
 }

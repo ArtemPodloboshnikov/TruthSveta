@@ -1,9 +1,9 @@
 @import '../../../styles/vars';
 
 
-@mixin color($color) {
+@mixin colorful($color) {
     
-    .wrap
+    .squircle
     {
         width: 54px;
         height: 60px;
@@ -13,23 +13,23 @@
         display: grid;
         align-items: center;
         justify-items: center;
-        & #heart
-        {
-            fill: orange !important;
-        }
-        &:hover
-        {
-            background-color: $color;
-        }
-
-        &:hover #heart
-        {
-            fill: $white !important;
-        }
+        
+      
     }
 }
 
+.wrap_brown, .wrap_crimson
+{
+    & *
+    {
+        cursor: pointer !important;
+    }
+}
 .wrap_brown
 {
-    @include color($brown);
+    @include colorful($brown);
+}
+.wrap_crimson
+{
+    @include colorful($medium_crimson);
 }

@@ -26,7 +26,8 @@
     
     display: grid;
     grid-auto-flow: row;
-    grid-column: 11 / 12;
+    grid-column: 12 / 12;
+    grid-row: 6 / 8;
     align-self: center;
     row-gap: 9px;
 
@@ -66,9 +67,9 @@
 }
 .wrap_yellow
 {
-    @include colorfulPage($light_yellow);
+    @include colorfulPage($medium_yellow);
 }
 .links_yellow
 {
-    @include colorfulLinks($crimson, 2);
+    @include colorfulLinks($medium_crimson, 2);
 }

@@ -1,5 +1,6 @@
 .main > div
 {
+    width: 100%;
     display: grid;
     height: 100vh;
     overflow: hidden;
@@ -52,10 +53,10 @@
   /* lg-устройства (больше или равно 992px) */
   @media (min-width: 992px) {
     /* CSS для: 992px <= ширины <= 1119px */
-    .main > div
+    .main > div, .main .menu
     {
-        grid-template-columns: repeat(12, 50px);
-        grid-template-rows: repeat(12, 50px);
+        grid-template-columns: repeat(8, 50px);
+        grid-template-rows: repeat(8, 50px);
         padding-left: 94px;
         padding-right: 94px;
         grid-column-gap: 30px;
@@ -67,12 +68,12 @@
   /* xl-устройства (больше или равно 1200px) */
   @media (min-width: 1200px) {
     
-    .main > div
+    .main > div, .main .menu
     {
         grid-template-columns: repeat(12, 65px);
         grid-template-rows: repeat(12, 65px);
-        padding-left: 165px;
-        padding-right: 165px;
+        padding-left: 100px;
+        padding-right: 100px;
         grid-column-gap: 30px;
         padding-top: 10px;
     }

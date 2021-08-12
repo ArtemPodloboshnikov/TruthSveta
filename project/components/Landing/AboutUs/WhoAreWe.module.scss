@@ -2,14 +2,20 @@
 @import '../common.module.scss';
 
 
-
-.content
+.networks
+{
+    grid-column: 12 / 12;
+    grid-row: 9 / 10;
+    justify-self: start;
+    justify-items: center;
+}
+@mixin colorful($color)
 {
     display: grid;
     grid-auto-flow: row;
     grid-column: 1 / 7;
     grid-row: 2 / 7;
-    color: $crimson;
+    color: $color;
 
     & > h1
     {
@@ -20,13 +26,80 @@
         align-self: center;
     }
 }
+.content_crimson
+{
+    @include colorful($medium_crimson);
+}
 .photo
 {
     grid-column: 7 / 10;
-    grid-row: 3 / 5;
-    // width: 140%;
+    grid-row: 4 / 5;
+    position: relative;
+    z-index: 2;
+    border-radius: 29px;
+    z-index: 3;
 }
-.buttonTruth
+.photo_shadow
 {
-    grid-column: 11 / 12;
+    animation: shadow 1.5s ease-in-out;
+    box-shadow: -15px -15px 40px 0px black;
+}
+.scoundrels
+{
+    position: relative;
+    grid-column: 7 / 10;
+    grid-row: 4 / 5;
+}
+.Nilson
+{
+    left: 70px;
+    z-index: 2;
+}
+.Jons
+{
+    right: 100px;
+    z-index: 1;
+}
+.Nilson_show
+{
+    animation: scoundrels_show 1.5s ease-in;
+    top: -200px;
+}
+.Jons_show
+{
+    animation: scoundrels_show 2s ease-out;
+    top: -200px;
+}
+
+@keyframes scoundrels_show
+{
+    0%
+    {
+        top: 0px;
+    }
+    50%
+    {
+        top: -90px;
+    }
+    100%
+    {
+        top: -200px;
+    }
+
+}
+@keyframes shadow
+{
+    0%
+    {
+        box-shadow: 0 0 20px 0px black;
+    }
+    50%
+    {
+        box-shadow: -7px -7px 20px 0px black;
+    }
+    100%
+    {
+        box-shadow: -15px -15px 40px 0px black;
+    }
+
 }
