@@ -1,10 +1,6 @@
 import React from 'react';
 import classes from './WhoAreWe.module.scss';
-import Link from 'next/link';
-import matchColors from '../matchColors';
-import Navicon from '../../Menu/Navicon/Navicon';
-import ButtonTruth from '../../Buttons/ButtonTruth/ButtonTruth';
-import Networks from '../../Networks/Networks';
+import matchColors from '../../../constants/matchColors';
 
 type Props = {
   title: string,
@@ -20,8 +16,7 @@ const WhoAreWe: React.FC<Props> = ({ title, text, children, className, scrollRea
   const contrast_color: string = matchColors[original_color];
  
   return (
-  <div className={className} id='AboutUs'>
-    <Navicon color={original_color}/>
+  <div className={className + ' grid'} id='AboutUs'>
     <div className={classes[`content_${contrast_color}`]}>
         <h1>{title}</h1>
         <br></br>
@@ -29,7 +24,7 @@ const WhoAreWe: React.FC<Props> = ({ title, text, children, className, scrollRea
     </div>
     
     <img 
-    className={classes.photo + ' ' + [classes.photo_shadow, ''][+(scrollReach)]} 
+    className={[classes.photo, [classes.photo_shadow, ''][+(scrollReach)]].join(' ')} 
     src={`/Landing/Svetlana_${original_color}.jpg`}
     />
     <img className={[classes.scoundrels, classes.Nilson, [classes.Nilson_show, ''][+(scrollReach)]].join(' ')} src='/Landing/Nilson.png'/>
@@ -37,11 +32,9 @@ const WhoAreWe: React.FC<Props> = ({ title, text, children, className, scrollRea
 
     <div className={classes[`cta_${contrast_color}`]}>
       <p>Нажми на кнопку! Расскажи свою историю!!!</p>
-      <img src='/images/arrow_crimson.png'/>
+      <img src={`/images/arrow_${contrast_color}.png`}/>
 
     </div>
-    <Networks color={contrast_color} className={classes.networks}/>
-    <ButtonTruth color={contrast_color}/>
     {children}
   </div>
   )

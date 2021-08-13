@@ -1,23 +1,75 @@
 @import '../../styles/vars.scss';
 
 
-.cta_crimson
-{
-    transform: rotate(0deg);
-    grid-column: 10 / 10;
-    grid-row: 10 / 10;
+@mixin colorful($text, $back) {
+    
+    transform: rotate(-30deg);
+    grid-column: 9 / 9;
+    grid-row: 12 / 12;
     display: grid;
     grid-auto-flow: row;
     position: relative;
     z-index: 4;
-    color: $medium_crimson;
+    color: $text;
     
     & > p
     {
-        transform: rotate(-25deg);
-        width: 295px;
+        font-family: 'ValueSansPro-Bold';
+        transform: rotate(30deg);
         position: relative;
+        top: 25%;
         right: 40%;
-        background-color: $light_yellow;
+        background-color: $back;
     }
+}
+.cta_crimson
+{
+    @include colorful($medium_crimson, transperent);
+    & > p
+    {
+        width: 295px;
+    }
+}
+.cta_yellow
+{
+    @include colorful($medium_yellow, $medium_crimson);
+    transform: rotate(-70deg);
+    & > img
+    {
+        transform: scaleX(-1);
+    }
+    & > p
+    {
+        width: 295px;
+        transform: rotate(60deg);
+        position: relative;
+        top: 0%;
+        left: 0%;
+    }
+}
+.cta_pink
+{
+    @include colorful($medium_pink, transperent);
+    grid-column: 9 / 9;
+    grid-row: 11 / 11;
+    justify-self: start;
+    & > p
+    {
+        width: 350px;
+        transform: rotate(30deg);
+    }
+    transform: rotate(-30deg);
+}
+.cta_turquoise
+{
+    @include colorful($light_turquiose, transperent);
+    grid-column: 9 / 9;
+    grid-row: 11 / 11;
+    justify-self: start;
+    & > p
+    {
+        width: 250px;
+        transform: rotate(10deg);
+    }
+    transform: rotate(-30deg);
 }

@@ -6,14 +6,44 @@
     width: 100%;
     height: 100vh;
     position: fixed;
+    left: 0;
+    top: 0;
+    transition: left 0.5s ease;
     z-index: 50;
-}
 
-.wrap_brown
+    @include cross(100px, 12px);
+
+    & > .cross
+    {
+        grid-column: 11 / 12;
+        grid-row: 2 / 3;
+        align-self: center;
+        justify-self: center;
+    }
+}
+.overlay_none
+{
+    left: 100%;
+    z-index: -12;
+    display: absolute;
+}
+.overlay_brown
 {
     @include colorful($brown);
 }
-.wrap_yellow
+.overlay_crimson
+{
+    @include colorful($medium_crimson);
+}
+.overlay_yellow
 {
     @include colorful($medium_yellow);
+}
+.overlay_pink
+{
+    @include colorful($medium_pink);
+}
+.overlay_turquoise
+{
+    @include colorful($medium_turquoise);
 }

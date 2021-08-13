@@ -4,12 +4,7 @@
     
   
         background-color: $color;
-        & path
-        {
-            fill: #F6F8F9 !important;
-            stroke: #F6F8F9 !important;
-        }
-        & *
+        & img, & object
         {
             -webkit-user-drag: none;
             user-select: none;
@@ -17,6 +12,7 @@
             -webkit-user-select: none;
             -ms-user-select: none;
         }
+       
 
     
 }
@@ -34,10 +30,71 @@
    
     & > a:nth-child(2)
     {
-        @if $row - 1 > 0
+        @if $row - 1 == 1
         {
            position: relative;
            top: 65%;
+        }
+        @else if $row - 2 < 1
+        {
+            
+        }@else
+        {
+            position: relative;
+            top: 65%;
+            grid-row: 2 / 2;
+        }
+
+    }
+    & > a:nth-child(3)
+    {
+        @if $row - 2 == 1
+        {
+           position: relative;
+           top: 68%;
+        }@else if $row - 2 < 1
+        {
+
+        }
+        @else
+        {
+            position: relative;
+            top: 65%;
+            grid-row: 3 / 3;
+        }
+    }
+    & > a:nth-child(4)
+    {
+        @if $row - 3 == 1
+        {
+           position: relative;
+           top: 68%;
+        }@else if $row - 3 < 1
+        {
+
+        }
+        @else
+        {
+            position: relative;
+            top: 65%;
+            grid-row: 4 / 4;
+        }
+    }
+    & > a:nth-child(5)
+    {
+        @if $row - 4 == 1
+        {
+           position: relative;
+           top: 68%;
+        }@else if $row - 4 < 1
+        {
+
+        }
+        @else
+        {
+            position: relative;
+            top: 65%;
+            grid-row: 5 / 5;
         }
     }
 
@@ -57,6 +114,22 @@
     }
     
 }
+.networks
+{
+    grid-column: 12 / 12;
+    grid-row: 9 / 10;
+    justify-self: start;
+    justify-items: center;
+    align-items: end;
+}
+.buttonTruth
+{
+    grid-column: 12 / 12;
+    grid-row: 12 / 12;
+    right: 40%;
+    position: relative;
+    justify-content: end;
+}
 .wrap_brown
 {
     @include colorfulPage($light_brown);
@@ -72,4 +145,28 @@
 .links_yellow
 {
     @include colorfulLinks($medium_crimson, 2);
+}
+.wrap_turquoise
+{
+    @include colorfulPage($medium_turquoise);
+}
+.links_turquoise
+{
+    @include colorfulLinks($medium_pink, 3);
+}
+.wrap_crimson
+{
+    @include colorfulPage($medium_crimson);
+}
+.links_crimson
+{
+    @include colorfulLinks($medium_yellow, 4);
+}
+.wrap_pink
+{
+    @include colorfulPage($medium_pink);
+}
+.links_pink
+{
+    @include colorfulLinks($light_turquiose, 5);
 }

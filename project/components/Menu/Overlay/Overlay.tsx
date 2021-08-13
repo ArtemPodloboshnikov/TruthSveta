@@ -3,18 +3,20 @@ import classes from './Overlay.module.scss';
 
 type Props = {
 
-    color: string
+    color: string,
+    close: boolean,
+    setClose: any
 }
 
-const Overlay: React.FC<Props> = ({color}) =>{
+const Overlay: React.FC<Props> = ({color, close, setClose}) =>{
     
-   console.log(classes[`wrap_${color}`] + ' menu')
+   let current_class = (close)?  classes[`overlay_${color}`] : classes.overlay_none;
     
     return (
     
-        <div className={classes[`wrap_${color}`] + ' menu'}>
-                
+        <div className={[current_class, 'grid'].join(' ')}>
             <h1>Hello!</h1>
+            <div className={classes.cross} onClick={()=>setClose(false)}></div>
         </div>
     )
 }

@@ -102,7 +102,7 @@ const IconBtn: React.FC<Props> = ({type, color, onClick, squircle = true}) =>{
                 break;
             }
     }
-
+ 
     return (
      
         <div className={classes[`wrap_${color}`]}>

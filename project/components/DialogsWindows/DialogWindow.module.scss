@@ -1,6 +1,6 @@
 @import '../../styles/vars.scss';
 
-@mixin colorful($color)
+@mixin colorful($color, $contentColor: $white)
 {
     width: 100%;
     height: 100vh;
@@ -27,33 +27,11 @@
         z-index: 101;
         bottom: 0vh;
         animation: contentTop 0.5s linear;
-        color: $white;
+        color: $contentColor;
     }
-    & .cross
-    {
-        position: relative;
-        background-color: $white;
-        cursor: pointer;
-        top: 0px; 
-        left: 0px;
-    }
-    & .cross:before, & .cross:after 
-    {
-        content: ""; 
-        position: absolute; 
-        width: 116.81px; 
-        height: 12.3px; 
-        background: $white;
-        border-radius: 12px;
-    }
-    & .cross:after
-    {
-        transform: rotate(45deg);
-    }
-    & .cross::before
-    {
-        transform: rotate(-45deg);
-    }
+
+    @include cross(116.81px, 12.3px, $contentColor);
+    
 }
 .overlay_brown
 {
@@ -62,6 +40,18 @@
 .overlay_crimson
 {
     @include colorful($medium_crimson)
+}
+.overlay_pink
+{
+    @include colorful($medium_pink)
+}
+.overlay_yellow
+{
+    @include colorful($medium_yellow, $medium_crimson)
+}
+.overlay_turquoise
+{
+    @include colorful($medium_turquoise)
 }
 .overlay_none
 {

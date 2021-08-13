@@ -1,0 +1,166 @@
+@import '../../../styles/vars';
+@import '../common.module.scss';
+
+@mixin colorful($color)
+{
+    display: grid;
+    grid-auto-flow: column;
+    grid-column: 1 / 12;
+    grid-row: 2 / 2;
+    color: $color;
+
+    & > h1
+    {
+        align-self: center;
+    }
+
+}
+.content_crimson
+{
+    @include colorful($medium_crimson);
+}
+.content_yellow
+{
+    @include colorful($medium_yellow);
+}
+.content_pink
+{
+    @include colorful($medium_pink);
+}
+.content_turquoise
+{
+    @include colorful($medium_turquoise);
+}
+.overlay
+{
+    position: relative;
+    grid-column: 4 / 6;
+    grid-row: 4 / 4;
+    z-index: 3;
+    background-color: transparent;
+    border-radius: 29px;
+    width: 418px;
+    height: 523px;
+    display: grid;
+    grid-auto-flow: column;
+    
+    & div
+    {
+        display: grid;
+    }
+    & div > p
+    {
+        display: none;
+        font-size: 18px;
+        position: absolute;
+        word-wrap: break-word;
+        color: $medium_yellow
+    }
+    & div > p > span
+    {
+        color: $white;
+    }
+    & > div:first-child
+    {
+        border-radius: 29px 0 0 29px;
+    }
+    & > div:last-child
+    {
+        border-radius: 0 29px 29px 0;
+    }
+    & > div:first-child:hover, & > div:nth-child(2):hover, & > div:last-child:hover
+    {
+        background-image: url('/Landing/Svetlana_invert.jpg');
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    & > div:nth-child(2):hover
+    {
+        background-position: center;
+    }
+    & > div:last-child:hover
+    {
+        background-position: right;
+    }
+    & > div:first-child:hover > p
+    {
+        text-align: right;
+        margin-left: 35%;
+        display: block;
+        align-self: center;
+        width: 240px;
+    }
+    & > div:nth-child(2):hover > p:first-child
+    {
+        margin-left: 5%;
+        display: block;
+        align-self: center;
+        width: 100px;
+    }
+    & > div:nth-child(2):hover > p:last-child
+    {
+        text-align: right;
+        margin-left: 71%;
+        display: block;
+        align-self: center;
+        width: 100px;
+    }
+    & > div:last-child:hover > p
+    {
+        margin-left: 7%;
+        display: block;
+        align-self: center;
+        width: 235px;
+    }
+    &:hover > div:not(:hover)
+    {
+     
+        background-color: $medium_crimson;
+    }
+    &:hover
+    {
+        border: 3px solid $medium_yellow;
+
+    }
+}
+.arrow_1
+{
+    grid-column: 2 / 2;
+    grid-row: 5 / 5;
+}
+.arrow_2
+{
+    grid-column: 9 / 9;
+    grid-row: 5 / 5;
+    transform: scaleX(-1);
+    width: 90%;
+}
+.arrow_3
+{
+    grid-column: 9 / 9;
+    grid-row: 8 / 8;
+    width: 190%;
+    transform: scale(-1, -1);
+}
+.arrow_4
+{
+    grid-column: 3 / 3;
+    grid-row: 10 / 10;
+    width: 140%;
+    transform: scaleY(-1);
+}
+.arrow_5
+{
+    grid-column: 2 / 2;
+    grid-row: 5 / 5;
+}
+.photo
+{
+    grid-column: 4 / 6;
+    grid-row: 4 / 4;
+    position: relative;
+    z-index: 2;
+    border-radius: 29px;
+    z-index: 1;
+}

@@ -1,14 +1,6 @@
 @import '../../../styles/vars';
 @import '../common.module.scss';
 
-
-.networks
-{
-    grid-column: 12 / 12;
-    grid-row: 9 / 10;
-    justify-self: start;
-    justify-items: center;
-}
 @mixin colorful($color)
 {
     display: grid;
@@ -29,6 +21,18 @@
 .content_crimson
 {
     @include colorful($medium_crimson);
+}
+.content_yellow
+{
+    @include colorful($medium_yellow);
+}
+.content_pink
+{
+    @include colorful($medium_pink);
+}
+.content_turquoise
+{
+    @include colorful($medium_turquoise);
 }
 .photo
 {

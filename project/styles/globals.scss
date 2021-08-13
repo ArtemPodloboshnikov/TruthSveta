@@ -72,7 +72,11 @@ h1
   height: 65px !important;
   margin: 0;
 }
-p
+ul, ol
+{
+  padding: 0;
+}
+p, li
 {
   font-family: 'ValueSansPro-Regular';
   font-size: 24px;
@@ -83,7 +87,90 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+ol > li
+{
+  list-style: none;
+}
 * {
   box-sizing: border-box;
+}
+.grid
+{
+    width: 100%;
+    display: grid;
+    height: 100vh;
+    overflow: hidden;
+}
+/* xs - устройства (до 576px) */
+@media (max-width: 576px) {
+/* CSS для ширины, которая меньше 575px (включительно) */
+
+    .grid
+    {
+        grid-template-columns: repeat(2, 174px);
+        grid-template-rows: repeat(2, 174px);
+        padding-left: 15px;
+        padding-right: 15px;
+        grid-column-gap: 30px;
+        padding-top: 10px;
+    }
+}
+
+/* sm-устройства (больше или равно 576px) */
+@media (min-width: 576px) {
+    /* CSS для: 576px <= ширины <= 767px */
+
+    .grid
+    {
+        grid-template-columns: repeat(6, 60px);
+        grid-template-rows: repeat(6, 60px);
+        padding-left: 33px;
+        padding-right: 33px;
+        grid-column-gap: 30px;
+        padding-top: 10px;
+    }
+}
+  
+  /* md-устройства (больше или равно 768px) */
+@media (min-width: 768px) {
+    /* CSS для: 768px <= ширины <= 991px */
+
+    .grid
+    {
+        grid-template-columns: repeat(12, 30px);
+        grid-template-rows: repeat(12, 30px);
+        padding-left: 39px;
+        padding-right: 39px;
+        grid-column-gap: 30px;
+        padding-top: 10px;
+    }
+}
+  
+  /* lg-устройства (больше или равно 992px) */
+@media (min-width: 992px) {
+    /* CSS для: 992px <= ширины <= 1119px */
+    .grid
+    {
+        grid-template-columns: repeat(8, 50px);
+        grid-template-rows: repeat(8, 50px);
+        padding-left: 94px;
+        padding-right: 94px;
+        grid-column-gap: 30px;
+        padding-top: 10px;
+    }
+
+}
+  
+  /* xl-устройства (больше или равно 1200px) */
+@media (min-width: 1200px) {
+    
+    .grid
+    {
+        grid-template-columns: repeat(12, 65px);
+        grid-template-rows: repeat(12, 65px);
+        padding-left: 100px;
+        padding-right: 100px;
+        grid-column-gap: 30px;
+        padding-top: 10px;
+    }
 }

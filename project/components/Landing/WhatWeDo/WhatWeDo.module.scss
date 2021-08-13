@@ -1,0 +1,96 @@
+@import '../../../styles/vars';
+@import '../common.module.scss';
+
+@mixin colorful($color)
+{
+    display: grid;
+    grid-auto-flow: row;
+    grid-column: 1 / 7;
+    grid-row: 2 / 10;
+    color: $color;
+
+    & > h1
+    {
+        align-self: start;
+        width: 750px;
+        position: relative;
+    }
+    & > p
+    {
+        position: relative;
+        align-self: start;
+        width: 500px;
+    }
+    & li
+    {
+        width: 500px;
+        display: grid;
+        grid-template-columns: 0.2fr 2fr;
+        grid-gap: 10px;
+    }
+    .li
+    {
+        padding: 12px;
+        color: $white;
+        background-color: $color;
+        font-size: 44px;
+        display: grid;
+        justify-self: stretch;
+        justify-items: center;
+        border-radius: 7px;
+        align-self: start;
+        width: 60px;
+        height: 60px;
+        margin-top: 23px;
+    }
+    .li ~ span
+    {
+        justify-self: start;
+        display: grid;
+        align-items: end;
+        justify-items: end;
+        font-size: 20px;
+    }
+    ol > li:first-child > span:nth-child(2)
+    {
+        position: relative;
+        top: -25%;
+    }
+    ol > li:nth-child(2) > span:nth-child(2),
+    ol > li:nth-child(3) > span:nth-child(2),
+    ol > li:nth-child(5) > span:nth-child(2)
+    {
+        position: relative;
+        top: -10%;
+    }
+    
+}
+.content_brown
+{
+    @include colorful($medium_brown);
+}
+.content_crimson
+{
+    @include colorful($medium_crimson);
+}
+.content_yellow
+{
+    @include colorful($medium_yellow);
+}
+.content_pink
+{
+    @include colorful($medium_pink);
+}
+.content_turquoise
+{
+    @include colorful($medium_turquoise);
+}
+.photo
+{
+    grid-column: 7 / 10;
+    grid-row: 4 / 5;
+    position: relative;
+    z-index: 2;
+    border-radius: 29px;
+    z-index: 3;
+}

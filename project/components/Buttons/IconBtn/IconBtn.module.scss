@@ -18,12 +18,15 @@
     }
 }
 
-.wrap_brown, .wrap_crimson
+.wrap_brown, .wrap_crimson, .wrap_pink, .wrap_turquoise, .wrap_yellow
 {
     & *
     {
         cursor: pointer !important;
     }
+
+    position: relative;
+    z-index: 5;
 }
 .wrap_brown
 {
@@ -32,4 +35,16 @@
 .wrap_crimson
 {
     @include colorful($medium_crimson);
+}
+.wrap_pink
+{
+    @include colorful($medium_pink);
+}
+.wrap_turquoise
+{
+    @include colorful($medium_turquoise);
+}
+.wrap_yellow
+{
+    @include colorful($medium_yellow);
 }

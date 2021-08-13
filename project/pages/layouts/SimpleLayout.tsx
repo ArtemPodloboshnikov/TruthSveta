@@ -15,9 +15,9 @@ const SimpleLayout: React.FC<Props> = ({children, description}) => {
           <meta name="description" content={description} />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <main className={classes.main}>
+        <body>
           {children}
-        </main>
+        </body>
   
        
       </html>

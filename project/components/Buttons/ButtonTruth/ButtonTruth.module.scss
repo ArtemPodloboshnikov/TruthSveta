@@ -1,14 +1,10 @@
 @import '../../../styles/vars.scss';
 
-.buttonTruth_crimson
-{
-    grid-column: 12 / 12;
-    grid-row: 12 / 12;
-    right: 40%;
-    position: relative;
-    justify-content: end;
-    border: 3px solid $medium_crimson;
-    background-image: url('/logo_crimson.svg');
+
+@mixin colorful($imageColor, $color) {
+   
+    border: 3px solid $color;
+    background-image: url('/logo_#{$imageColor}.svg');
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 12px;
@@ -16,9 +12,47 @@
     width: 84px;
     height: 84px;
     cursor: pointer;
+    &:hover, .hover
+    {
+        background-image: url('/logo_white.svg');
+        background-color: $color;
+    }
 }
-.buttonTruth_crimson:hover
+@mixin hoverClass($color) {
+    
+    background-image: url('/logo_white.svg') !important;
+    background-color: $color;
+}
+.hover_crimson
 {
-    background-image: url('/logo_white.svg');
-    background-color: $medium_crimson;
+  @include hoverClass($medium_crimson);
+}
+.hover_pink
+{
+  @include hoverClass($medium_pink);
+}
+.hover_turquoise
+{
+  @include hoverClass($light_turquiose);
+}
+.hover_yellow
+{
+  @include hoverClass($medium_yellow);
+}
+
+.buttonTruth_crimson
+{
+  @include colorful(crimson, $medium_crimson);
+}
+.buttonTruth_pink
+{
+  @include colorful(pink, $medium_pink);
+}
+.buttonTruth_turquoise
+{
+  @include colorful(turquoise, $light_turquiose);
+}
+.buttonTruth_yellow
+{
+  @include colorful(yellow, $medium_yellow);
 }

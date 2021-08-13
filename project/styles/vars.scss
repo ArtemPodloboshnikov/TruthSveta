@@ -3,7 +3,10 @@ $light_brown: #E3B5A4;
 $brown: #773344;
 $medium_brown: #934A5C;
 //turquoise
-$light_turquoise: #9CFFFA;
+$turquoise: #46f4ec;
+$medium_turquoise: #6CFFF8;
+$light_turquiose: #9CFFFA;
+
 //pink
 $medium_pink: #E05881;
 $pink: #DE3266;
@@ -18,3 +21,31 @@ $yellow: #F5E535;
 $medium_yellow: #FFF587;
 //white
 $white: #fff;
+
+@mixin cross($width, $height, $color: $white) 
+{
+    & .cross
+    {
+        position: relative;
+        cursor: pointer;
+        top: 0px; 
+        left: 0px;
+    }
+    & .cross:before, & .cross:after 
+    {
+        content: ""; 
+        position: absolute; 
+        width: $width; 
+        height: $height; 
+        background: $color;
+        border-radius: 12px;
+    }
+    & .cross:after
+    {
+        transform: rotate(45deg);
+    }
+    & .cross::before
+    {
+        transform: rotate(-45deg);
+    }
+}
