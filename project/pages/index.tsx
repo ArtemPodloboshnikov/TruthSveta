@@ -112,6 +112,8 @@ export default function Home() {
       title={LandingContent.JoinUs.title}
       title2={LandingContent.JoinUs.title2}
       text={LandingContent.JoinUs.text}
+      slider_text={LandingContent.JoinUs.slider_text}
+      linksHref={['/vacancy']}
       className={classes['wrap_' + LandingColors.JoinUs]}
       >
          <SideBar color={LandingColors.JoinUs}/>

@@ -11,7 +11,7 @@
     transition: left 0.5s ease;
     z-index: 50;
 
-    @include cross(100px, 12px);
+    @include cross(100px, 12px, map-get($colorsMatch, $color));
 
     & > .cross
     {
@@ -29,7 +29,7 @@
 }
 .overlay_brown
 {
-    @include colorful($brown);
+    @include colorful($light_brown);
 }
 .overlay_crimson
 {

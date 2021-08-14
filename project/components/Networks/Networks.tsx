@@ -3,6 +3,7 @@ import classes from './Networks.module.scss';
 import IconBtn from '../Buttons/IconBtn/IconBtn';
 import DialogWindow from '../DialogsWindows/DialogWindow';
 import copyToClipboard from '../../functions/copyToClipboard';
+import Links from '../../constants/Links';
 
 type Props = {
 
@@ -27,7 +28,7 @@ const Networks: React.FC<Props> = ({color, className}) =>{
             <IconBtn type='vk' squircle={false} color={color}/>
             <IconBtn type='instagram' squircle={false} color={color}/>
             <IconBtn 
-            onClick={()=>{setClick(true); copyToClipboard('Saveliisavelyev@yandex.ru')}} 
+            onClick={()=>{setClick(true); copyToClipboard(Links.email)}} 
             type='email' 
             squircle={false} 
             color={color}/>

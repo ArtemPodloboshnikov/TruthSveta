@@ -22,6 +22,11 @@ $medium_yellow: #FFF587;
 //white
 $white: #fff;
 
+$colorsMatch: ($light_turquiose: $light_pink, $medium_turquoise: $medium_pink,
+              $medium_brown: $brown, $medium_crimson: $medium_yellow,
+              $medium_yellow: $medium_crimson, $light_pink: $light_turquiose,
+              $light_brown: $brown);
+
 @mixin cross($width, $height, $color: $white) 
 {
     & .cross

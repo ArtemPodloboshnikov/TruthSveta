@@ -1,6 +1,6 @@
 @import '../../../styles/vars.scss';
 
-.navicon
+@mixin colorful($color)
 {
     display: grid !important;
     width: 6vw;
@@ -17,7 +17,7 @@
     & > .stick 
     {
         height: 8px;
-        background-color: $white;
+        background-color: $color;
         border-radius: 12px;
     }
     & > .stick:nth-child(1)
@@ -34,12 +34,33 @@
     {
         width: 43px;
     }
-}
-.navicon:hover
-{
-    .stick:nth-child(2), .stick:nth-child(3)
+    &:hover
     {
-        width: 76px;
-        transition: width 0.4s ease;
+        .stick:nth-child(2), .stick:nth-child(3)
+        {
+            width: 76px;
+            transition: width 0.4s ease;
+        }
     }
+}
+
+.navicon_brown
+{
+    @include colorful(map-get($colorsMatch, $medium_brown))
+}
+.navicon_crimson
+{
+    @include colorful(map-get($colorsMatch, $medium_crimson))
+}
+.navicon_pink
+{
+    @include colorful(map-get($colorsMatch, $light_pink))
+}
+.navicon_yellow
+{
+    @include colorful(map-get($colorsMatch, $medium_yellow))
+}
+.navicon_turquoise
+{
+    @include colorful(map-get($colorsMatch, $medium_turquoise))
 }

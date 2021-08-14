@@ -1,5 +1,19 @@
 @font-face
 {
+  font-family: 'Roboto-Regular';
+  src: local('Roboto-Regular'), url('../public/fonts/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face
+{
+  font-family: 'Roboto-Bold';
+  src: local('Roboto-Bold'), url('../public/fonts/Roboto-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face
+{
   font-family: 'ValueSansPro-Black';
   src: local('ValueSansPro-Black'), url('../public/fonts/ValueSansPro-Black.woff2') format('woff2');
   font-weight: normal;
@@ -86,6 +100,7 @@ p, li
 a {
   color: inherit;
   text-decoration: none;
+  font-family: 'ValueSansPro-Regular';
 }
 ol > li
 {

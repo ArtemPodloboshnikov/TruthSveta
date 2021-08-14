@@ -6,30 +6,120 @@
     height: 100%;
     display: grid;
     grid-auto-flow: row;
-    background-color: red;
+    grid-row-gap: 10px;
+    
 
     & > .slide
     {
         width: 100%;
+        height: 100%;
         border-radius: 29px;
         overflow: hidden;
-        background-color: blue;
+        display: grid;
+        grid-auto-flow: row;
+        // grid-template-columns: repeat(auto-fill, 1fr);
+        justify-items: stretch;
+        align-items: stretch;
+        color: $white;
+
+       
+        & > div a
+        {
+            z-index: 5 !important;
+            opacity: 1;
+            position: absolute;
+            align-self: end;
+            display: none;
+            font-size: 18px;
+            color:  map-get($colorsMatch, $color);
+        }
+        & > div:hover > a
+        {
+            display: block;
+            top: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        & > div img
+        {
+            object-fit: cover;
+            width: 100%;
+            // height: 46.5vh;
+        }
+        & > div > p
+        {
+            display: none;
+        }
+        & > div:hover > p
+        {
+            position: absolute;
+            z-index: 3;
+            width: 100%;
+            padding-left: 40px;
+            padding-right: 40px;
+            top: 30%;
+            font-size: 16px;
+            transform: translate(0%, -50%);
+            display: block;
+            
+        }
+        & > div
+        {
+            position: relative;
+        }
+        & > div:hover::before
+        {
+            content: '';
+           z-index: 2;
+            // display: grid;
+            // word-wrap: break-word;
+            // justify-items: center;
+            // align-items: center;
+            // font-size: 24px;
+            // font-family: 'ValueSansPro-Regular';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 29px;
+            left: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.5);
+
+            & *
+            {
+                margin: 3%;
+            }
+        }
     }
     & > .controllers
     {
         display: grid;
         grid-auto-flow: column;
-
+        justify-content: center;
+        grid-gap: 10px;
         & > div
         {
             width: 20px;
             height: 20px;
             border-radius: 20px;
             background-color: $color;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+        & > .action::after
+        {
+            content: '';
+            position: relative;
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            background-color:  map-get($colorsMatch, $color);
+
         }
     }
 }
-.wrap_turquiose
+.wrap_turquoise
 {
     @include colorful($light_turquiose);
 }

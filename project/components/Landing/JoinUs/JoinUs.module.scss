@@ -36,15 +36,6 @@
 }
 .slider
 {
-    grid-column: 4 / 7;
-    grid-row: 10 / 10
-}
-.photo
-{
-    grid-column: 7 / 10;
-    grid-row: 4 / 5;
-    position: relative;
-    z-index: 2;
-    border-radius: 29px;
-    z-index: 3;
+    grid-column: 4 / 9;
+    grid-row: 8 / 12;
 }

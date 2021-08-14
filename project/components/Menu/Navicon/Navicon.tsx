@@ -14,7 +14,7 @@ const Navicon: React.FC<Props> = ({color}) =>{
     return (
         <>
         <Overlay color={color} close={click} setClose={setClick}/>
-        <div className={classes.navicon} onClick={()=>setClick(true)}>
+        <div className={classes[`navicon_${color}`]} onClick={()=>setClick(true)}>
                 <div className={classes.stick}></div>
                 <div className={classes.stick}></div>
                 <div className={classes.stick}></div>

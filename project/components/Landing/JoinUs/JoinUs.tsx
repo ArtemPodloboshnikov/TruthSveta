@@ -6,12 +6,14 @@ import Slider from '../../Slider/Slider';
 type Props = {
   title: string,
   text: string,
-  title2: string
+  title2: string,
+  slider_text: string[],
   className: any,
+  linksHref: string[],
   children: React.ReactNode
 }
 
-const JoinUs: React.FC<Props> = ({ title, title2, text, children, className }) => {
+const JoinUs: React.FC<Props> = ({ title, title2, text, slider_text, linksHref, children, className }) => {
   
   const original_color: string = className.split('_')[2];
   const contrast_color: string = matchColors[original_color];
@@ -27,10 +29,14 @@ const JoinUs: React.FC<Props> = ({ title, title2, text, children, className }) =
         <br></br>
         <h1>{title2}</h1>
     </div>
-    <Slider className={classes.slider} color={contrast_color}>
-      <img src='/Landing/slide1'/>
-      <img src='/Landing/slide2'/>
-      <img src='/Landing/slide3'/>
+    <Slider 
+    text={slider_text} 
+    className={classes.slider} 
+    color={contrast_color}
+    linksHref={linksHref}>
+      <img src='/Landing/slide1.jpg'/>
+      <img src='/Landing/slide2.jpg'/>
+      <img src='/Landing/slide3.jpg'/>
     </Slider>
     <div className={classes[`cta_${contrast_color}`]}>
       <p>{`Ты знаешь, что делать ) Жду (^人^)`}</p>

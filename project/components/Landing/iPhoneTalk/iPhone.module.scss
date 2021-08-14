@@ -3,31 +3,220 @@
 .buttonTruth
 {
     position: relative;
-    background-color: #F6F8F9;
-    width: 88.29px;
-    height: 88.29px;
-    border-radius: 80px;
-    align-self: end;
     display: grid;
-    align-items: center;
-    justify-items: center;
-    // border: 1px solid;
-    // border-image-source: radial-gradient(#0B0E7F , #0B95DD);
-    // border-image-slice: 1;
+    grid-column: 6 / 6;
+    grid-row: 12 / 12;
+    align-self: start;
+    top: 55%;
+    left: -20%;
+    z-index: 6;
+    cursor: pointer;
 
-    & > object
-    {
-        margin-top: 10%;
-    }
+    
 
-    & > object:hover > svg > path
-    {
-        fill: #F6F8F9 !important;
-    }
+}   
+.arrow_truth
+{
+    position: relative;
+    grid-column: 5 / 5;
+    justify-self: start;
+    grid-row: 12 / 12;
+    z-index: 7;
+    transform: scale(0.6, 0.6) rotate(10deg);
+    right: 35%;
+    top: -30%;
+}
+.overlay
+{
+    grid-column: 3 / 11;
+    grid-row: 1 / 16;
+    position: relative;
+    z-index: 2;
+    background-image: url('/Landing/iPhone.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .phone
 {
-    grid-column: 3 / 7;
-    width: 220%;
+    grid-column: 3 / 10;
+    grid-row: 1 / 16;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+   
+    display: grid;
+    grid-auto-flow: row;
+
+    & *
+    {
+        font-family: 'Roboto-Regular';
+        color: $white;
+    }
+
+    & > .header
+    {
+        grid-column: 1 / 5;
+        grid-row: 2 / 3;
+        width: 80%;
+        height: 100%;
+        justify-self: center;
+        background-color: $medium_brown;
+        display: grid;
+        align-items: end; 
+        justify-items: center;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding-bottom: 10px;
+
+
+        & > .arrow
+        {
+            grid-column: 2 / 4;
+            grid-row: 2 / 2;
+            align-self: center;
+        }
+        & > .photo
+        {
+            grid-column: 4 / 5;
+            grid-row: 2 / 2;
+            align-self: start;
+
+        }
+        & > .name
+        {
+            position: relative;
+            font-size: 15px;
+            grid-row: 2 / 2;
+            grid-column: 5 / 9;
+            align-self: start;
+        }
+        & > .sub
+        {
+            font-size: 13px;
+            grid-row: 2 / 2;
+            grid-column: 5 / 9;
+            align-self: end;
+            color: #E5E3E3;
+        }
+        & > .points
+        {
+            grid-row: 2 / 2;
+            grid-column: 10 / 10;
+            justify-self: center;
+            align-self: center;
+        }
+       
+    }
+
+    & > .content
+    {
+        display: grid;
+        grid-column: 1 / 5;
+        grid-row: 3 / 9;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        
+        position: relative;
+        background-image: url('/Landing/background_phone.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        & > .alien, & > .my
+        {
+            width: 100%;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            display: grid;
+            grid-auto-flow: row;
+            background-color: $brown;
+            border-radius: 12px;
+            top: 10%;
+            right: 30%;
+            position: absolute;
+            z-index: 4;
+            & > p
+            {
+                font-size: 14px;
+                margin: 4px;
+            }
+            & span
+            {
+                font-family: 'Roboto-Bold';
+            }
+            & > sub
+            {
+                font-size: 10px;
+                color: #E5E3E3;
+                justify-self: end;
+                align-self: end;
+                margin-top: -3%;
+                margin-right: 3%;
+                position: relative;
+            }
+            & a
+            {
+                color: $medium_yellow;
+            }
+        }
+        & > .my
+        {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            left: 20%;
+            right: 0;
+            top: 30%;
+            height: 100%;
+            background-color: $medium_brown;
+
+            & > sub
+            {
+                margin-top: -20%;
+            }
+        }
+    }
+
+    & > .message
+    {
+        display: grid;
+        grid-column: 1 / 5;
+        grid-row: 9 / 12;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2 , 1fr);
+        background-color: $brown;
+        position: relative;
+        padding-top: 0.7%;
+        & > .smile
+        {
+            grid-row: 1 / 1;
+            grid-column: 2 / 2;
+            
+        }
+        & > p
+        {
+            grid-row: 1 / 1;
+            grid-column:  2 / 4;
+            justify-self: center;
+            font-size: 15px;
+            width: 15vw;
+            height: 3vh;
+            display: grid;
+            align-items: center;
+            position: relative;
+            margin-right: 15%;
+        }
+        & > .send
+        {
+            grid-row: 1 / 1;
+            grid-column:  3 / 4;
+            justify-self: end;
+            position: relative;
+            margin-top: 1%;
+            margin-right: 5%;
+            width: 20%;
+        }
+    }
+
 
 }
